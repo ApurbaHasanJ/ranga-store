@@ -63,10 +63,10 @@ const showProductDetails = (product_id) => {
 
 const showProductDetailsInModal = (product_details) => {
    console.log(product_details);
-   setInnerText('exampleModalLabel', product_details.title);
-   setInnerText('product_id', product_details.id);
-   setInnerText('modal_body', product_details.description);
-   setInnerText('rating', product_details.rating.rate);
+   setInnerText2('exampleModalLabel', product_details.title);
+   setInnerText2('product_id', product_details.id);
+   setInnerText2('modal_body', product_details.description);
+   setInnerText2('rating', product_details.rating.rate);
 };
 
 const getInputValue = (id) => {
@@ -86,6 +86,11 @@ const updatePrice = (id, value) => {
 // set innerText function
 const setInnerText = (id, value) => {
    document.getElementById(id).innerText = value.toFixed(2);
+};
+
+// set innerText function for modal
+const setInnerText2 = (id, value) => {
+   document.getElementById(id).innerText = value;
 };
 
 // update delivery charge and total Tax
